@@ -27,6 +27,12 @@ namespace nasa
             int x = ValaszMerete == "-" ? 0 : int.Parse(ValaszMerete);
             return x;
         }
+        //7. feldadat
+        public static bool Domain(string Cimek)
+        {
+            var x = Cimek[Cimek.Length - 1];
+            return Char.IsDigit(x);
+        }
     }
 
     

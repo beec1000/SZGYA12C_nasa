@@ -31,6 +31,8 @@ namespace nasa
 
             Console.WriteLine($"Válaszok összes mérete: {ByteSzam.Sum()} byte");
 
+            Console.WriteLine("8. feladat");
+
 
 
         }
