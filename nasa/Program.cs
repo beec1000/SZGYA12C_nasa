@@ -32,9 +32,18 @@ namespace nasa
             Console.WriteLine($"Válaszok összes mérete: {ByteSzam.Sum()} byte");
 
             Console.WriteLine("8. feladat");
+            var domainSzamlalo = 0;
+            foreach (var i in keresett)
+            {
+                if (Keres.Domain(i.Cim))
+                {
+                    domainSzamlalo++;
+                }
+            }
 
+            var szazalek = (double)domainSzamlalo / keresett.Count() * 100;
 
-
+            Console.WriteLine($"Domain-es kérések: {Math.Round(szazalek, 2)}%");
         }
     }
 }

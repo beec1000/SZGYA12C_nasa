@@ -30,8 +30,7 @@ namespace nasa
         //7. feldadat
         public static bool Domain(string Cimek)
         {
-            var x = Cimek[Cimek.Length - 1];
-            return Char.IsDigit(x);
+            return !Char.IsDigit(Cimek[Cimek.Length - 1]);
         }
     }
 
