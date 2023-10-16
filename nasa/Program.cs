@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace nasa
 {
@@ -20,7 +21,18 @@ namespace nasa
             Console.WriteLine($"Kérések száma: {keresett.Count}");
 
             Console.WriteLine("6. feladat");
-            
+
+            var ByteSzam = new List<int>();
+
+            foreach (var i in keresett)
+            {
+                ByteSzam.Add(Keres.ByteMeret(i.Meret));
+            }
+
+            Console.WriteLine($"Válaszok összes mérete: {ByteSzam.Sum()} byte");
+
+
+
         }
     }
 }
